@@ -1,0 +1,71 @@
+﻿<Window x:Class="WpfAppHangedMan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppHangedMan"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="gridMain">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="Images/man0.jpg" x:Name ="man0" Grid.Column="0"
+               Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man1.jpg" x:Name ="man1" Grid.Column="0"
+                Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man2.jpg" x:Name ="man2" Grid.Column="0"
+        Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man3.jpg" x:Name ="man3" Grid.Column="0"
+        Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man4.jpg" x:Name ="man4" Grid.Column="0"
+            Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man5.jpg" x:Name ="man5" Grid.Column="0"
+            Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man6.jpg" x:Name ="man6" Grid.Column="0"
+            Grid.Row="0" Grid.RowSpan="2"/>
+        <Image Source="Images/man7.jpg" x:Name ="man7" Grid.Column="0"
+            Grid.Row="0" Grid.RowSpan="2"/>
+        <UniformGrid x:Name="ugrid1" 
+                     Grid.Column="1" Grid.Row="0"
+                      FlowDirection="RightToLeft" Rows="1">
+            
+        </UniformGrid>
+        <UniformGrid x:Name="ugrid2" 
+                     Grid.Column="1" 
+                     Grid.Row="1" Rows="2" 
+                     FlowDirection="RightToLeft">
+            
+        </UniformGrid>
+        <Grid Grid.Row="2" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="3" Content="הבא מילה" MaxWidth="80" MaxHeight="50"
+                     Click="Button_Click_BringW"
+                    FontSize="15" FontWeight="Bold" />
+        </Grid>
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Column="0" FontSize="20"  
+                       TextAlignment="Left"
+                       Width="200" Height="40" Text="Number of errors:" Margin="5"/>
+            <TextBox x:Name="txtNumError" Grid.Column="1" Margin="5" MaxHeight="60" 
+                     MaxWidth="80" BorderThickness="4"
+                     BorderBrush="Black" IsReadOnly="True" 
+                     FontSize="20" TextAlignment="Center" VerticalContentAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>
